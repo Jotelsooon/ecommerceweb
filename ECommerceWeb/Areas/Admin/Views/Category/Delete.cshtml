@@ -1,23 +1,32 @@
 @model ECommerceWeb.Models.Category
 @{
-    ViewData["Title"] = "Eliminar categoría";
+    ViewData["Title"] = "Eliminar Categoría";
 }
 
-<div class="row justify-content-center">
-    <div class="col-md-6">
-        <div class="card border-danger">
-            <div class="card-header bg-danger text-white">
-                <h4>⚠️ Confirmar eliminación</h4>
-            </div>
-            <div class="card-body">
-                <p>¿Estás seguro que querés eliminar la categoría <strong>@Model.Name</strong>?</p>
-                <form method="post" asp-area="Admin" asp-controller="Category" asp-action="Delete">
-                    @Html.AntiForgeryToken()
-                    <input asp-for="Id" hidden />
-                    <button type="submit" class="btn btn-danger">Sí, eliminar</button>
-                    <a asp-area="Admin" asp-controller="Category" asp-action="Index" class="btn btn-outline-secondary">Cancelar</a>
-                </form>
-            </div>
+<div class="container py-4">
+    <div class="card shadow-sm border-0 rounded-4 mx-auto" style="max-width: 600px;">
+        <div class="card-body p-4 p-md-5">
+            <h3 class="fw-bold mb-4 text-danger"><i class="fa-solid fa-triangle-exclamation me-2"></i>¿Eliminar Categoría?</h3>
+            <p class="text-muted mb-4">Esta acción no se puede deshacer.</p>
+            
+            <form method="post" asp-action="Delete">
+                <input asp-for="Id" hidden />
+                
+                <div class="mb-3">
+                    <label asp-for="Name" class="form-label fw-semibold text-muted">Nombre</label>
+                    <input asp-for="Name" disabled class="form-control rounded-3 bg-light border-0 py-2" />
+                </div>
+                
+                <div class="mb-4">
+                    <label asp-for="DisplayOrder" class="form-label fw-semibold text-muted">Orden de Visualización</label>
+                    <input asp-for="DisplayOrder" disabled class="form-control rounded-3 bg-light border-0 py-2" />
+                </div>
+                
+                <div class="d-flex gap-2 pt-2">
+                    <button type="submit" class="btn btn-danger rounded-pill px-4 shadow-sm fw-bold">Sí, Eliminar</button>
+                    <a asp-action="Index" class="btn btn-light rounded-pill px-4 text-muted fw-semibold border">Cancelar</a>
+                </div>
+            </form>
         </div>
     </div>
 </div>

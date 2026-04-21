@@ -104,4 +104,25 @@ public class ProductController : Controller
         _unitOfWork.Save();
         return Json(new { success = true, message = "Producto eliminado" });
     }
+    public IActionResult Delete(int? id)
+    {
+        var productToBeDeleted = _unitOfWork.Product.Get(u => u.Id == id);
+        if (productToBeDeleted == null)
+        {
+            return Json(new { success = false, message = "Error al borrar el producto." });
+        }
+         if (!string.IsNullOrEmpty(productToBeDeleted.ImageUrl))
+         {
+             var imagePath = Path.Combine(_webHostEnvironment.WebRootPath, productToBeDeleted.ImageUrl.TrimStart('\\', '/'));
+             if (System.IO.File.Exists(imagePath))
+             {
+                 System.IO.File.Delete(imagePath);
+             }
+         }
+
+        _unitOfWork.Product.Remove(productToBeDeleted);
+        _unitOfWork.Save();
+
+        return Json(new { success = true, message = "Producto eliminado correctamente." });
+    }
 }
