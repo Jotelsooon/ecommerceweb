@@ -5,12 +5,12 @@ using ECommerceWeb.DataAccess.Repository;
 namespace ECommerceWeb.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class CategoryControllers : Controller
+    public class CategoryController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
 
         // Constructor: inyectamos el UnitOfWork para conectarnos a la base de datos
-        public CategoryControllers(IUnitOfWork unitOfWork)
+        public CategoryController(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
         }
