@@ -13,3 +13,4 @@ C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb.Utility\obj\Debug\net10.0\ECommer
 C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb.Utility\obj\Debug\net10.0\refint\ECommerceWeb.Utility.dll
 C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb.Utility\obj\Debug\net10.0\ECommerceWeb.Utility.pdb
 C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb.Utility\obj\Debug\net10.0\ref\ECommerceWeb.Utility.dll
+C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb.Utility\obj\Debug\net10.0\ECommerceWeb.Utility.sourcelink.json

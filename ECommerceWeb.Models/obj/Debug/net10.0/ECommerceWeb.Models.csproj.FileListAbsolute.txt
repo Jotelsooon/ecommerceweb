@@ -10,3 +10,4 @@ C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb.Models\obj\Debug\net10.0\ECommerc
 C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb.Models\obj\Debug\net10.0\refint\ECommerceWeb.Models.dll
 C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb.Models\obj\Debug\net10.0\ECommerceWeb.Models.pdb
 C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb.Models\obj\Debug\net10.0\ref\ECommerceWeb.Models.dll
+C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb.Models\obj\Debug\net10.0\ECommerceWeb.Models.sourcelink.json

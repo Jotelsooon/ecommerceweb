@@ -220,7 +220,6 @@ C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb\obj\Debug\net10.0\compressed\a3yg
 C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb\obj\Debug\net10.0\compressed\nezrqnk58p-{0}-muycvpuwrr-muycvpuwrr.gz
 C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb\obj\Debug\net10.0\compressed\v0zgfp0y55-{0}-87fc7y1x7t-87fc7y1x7t.gz
 C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb\obj\Debug\net10.0\compressed\yfc7ypekbg-{0}-mlv21k5csn-mlv21k5csn.gz
-C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb\obj\Debug\net10.0\compressed\xkwq34q3up-{0}-b9sayid5wm-b9sayid5wm.gz
 C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb\obj\Debug\net10.0\compressed\jvat70eyjt-{0}-61n19gt1b8-61n19gt1b8.gz
 C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb\obj\Debug\net10.0\compressed\qjguvn3cwa-{0}-xtxxf3hu2r-xtxxf3hu2r.gz
 C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb\obj\Debug\net10.0\compressed\148tqgdaa7-{0}-bqjiyaj88i-bqjiyaj88i.gz
@@ -409,3 +408,5 @@ C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb\bin\Debug\net10.0\ru\Microsoft.Co
 C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Scripting.resources.dll
 C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll
 C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb\obj\Debug\net10.0\ECommerceWeb.sourcelink.json
+C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb\obj\Debug\net10.0\compressed\xkwq34q3up-{0}-smbouniltj-smbouniltj.gz

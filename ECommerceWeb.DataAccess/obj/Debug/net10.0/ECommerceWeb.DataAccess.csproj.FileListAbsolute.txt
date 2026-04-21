@@ -15,3 +15,4 @@ C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb.DataAccess\obj\Debug\net10.0\refi
 C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb.DataAccess\obj\Debug\net10.0\ECommerceWeb.DataAccess.pdb
 C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb.DataAccess\obj\Debug\net10.0\ECommerceWeb.DataAccess.genruntimeconfig.cache
 C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb.DataAccess\obj\Debug\net10.0\ref\ECommerceWeb.DataAccess.dll
+C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb.DataAccess\obj\Debug\net10.0\ECommerceWeb.DataAccess.sourcelink.json

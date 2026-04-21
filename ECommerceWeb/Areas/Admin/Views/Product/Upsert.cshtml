@@ -6,7 +6,8 @@
 <div class="row justify-content-center">
     <div class="col-md-7">
         <h2 class="mb-4">@ViewData["Title"]</h2>
-        <form method="post" enctype="multipart/form-data">
+        <form method="post" enctype="multipart/form-data" asp-area="Admin" asp-controller="Product" asp-action="Upsert">
+            @Html.AntiForgeryToken()
             <input asp-for="Id" hidden />
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
@@ -29,8 +30,7 @@
 
             <div class="mb-3">
                 <label asp-for="CategoryId" class="form-label">Categoría</label>
-                <select asp-for="CategoryId" asp-items="ViewBag.Categories"
-                        class="form-select">
+                <select asp-for="CategoryId" asp-items="ViewBag.Categories" class="form-select">
                     <option value="">-- Seleccioná una categoría --</option>
                 </select>
                 <span asp-validation-for="CategoryId" class="text-danger"></span>
@@ -42,14 +42,13 @@
                 @if (!string.IsNullOrEmpty(Model.ImageUrl))
                 {
                     <div class="mt-2">
-                        <img src="@Model.ImageUrl"
-                             style="width:120px;height:120px;object-fit:cover;border-radius:8px;" />
+                        <img src="@Model.ImageUrl" style="width:120px;height:120px;object-fit:cover;border-radius:8px;" />
                     </div>
                 }
             </div>
 
             <button type="submit" class="btn btn-dark">Guardar</button>
-            <a asp-action="Index" class="btn btn-outline-secondary">Cancelar</a>
+            <a asp-area="Admin" asp-controller="Product" asp-action="Index" class="btn btn-outline-secondary">Cancelar</a>
         </form>
     </div>
 </div>

@@ -11,10 +11,11 @@
             </div>
             <div class="card-body">
                 <p>¿Estás seguro que querés eliminar la categoría <strong>@Model.Name</strong>?</p>
-                <form method="post">
+                <form method="post" asp-area="Admin" asp-controller="Category" asp-action="Delete">
+                    @Html.AntiForgeryToken()
                     <input asp-for="Id" hidden />
                     <button type="submit" class="btn btn-danger">Sí, eliminar</button>
-                    <a asp-action="Index" class="btn btn-outline-secondary">Cancelar</a>
+                    <a asp-area="Admin" asp-controller="Category" asp-action="Index" class="btn btn-outline-secondary">Cancelar</a>
                 </form>
             </div>
         </div>
