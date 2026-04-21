@@ -1,31 +1,121 @@
-html {
-  font-size: 14px;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
+:root {
+    /* Paleta de colores moderna */
+    --primary-color: #6c5ce7; /* Un morado vibrante, muy usado en tiendas modernas */
+    --secondary-color: #a29bfe;
+    --dark-color: #2d3436;
+    --light-bg: #f8f9fa;
+    --text-muted: #636e72;
 }
 
 body {
-  margin-bottom: 60px;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light-bg);
+    color: var(--dark-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin-bottom: 0;
 }
 
-.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
-  color: var(--bs-secondary-color);
-  text-align: end;
+main {
+    flex: 1;
 }
 
-.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
-  text-align: start;
+/* --- Navegación --- */
+.navbar {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px); /* Efecto cristal moderno */
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: var(--primary-color) !important;
+    font-size: 1.5rem;
+    letter-spacing: -0.5px;
+}
+
+.nav-link {
+    font-weight: 600;
+    color: var(--dark-color) !important;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--primary-color) !important;
+    transform: translateY(-2px);
+}
+
+/* --- Botones --- */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    border-radius: 30px;
+    padding: 10px 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #5b4bc4;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(108, 92, 231, 0.3);
+}
+
+/* --- Hero Section (Inicio) --- */
+.hero-section {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 80px 20px;
+    border-radius: 20px;
+    margin-top: 20px;
+    box-shadow: 0 15px 30px rgba(108, 92, 231, 0.2);
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-weight: 700;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+/* --- Tarjetas de Categorías --- */
+.category-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    height: 100%;
+}
+
+.category-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.category-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+/* --- Footer --- */
+.footer {
+    background-color: white;
+    border-top: none !important;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.03);
+    padding: 20px 0;
+    margin-top: 50px;
 }

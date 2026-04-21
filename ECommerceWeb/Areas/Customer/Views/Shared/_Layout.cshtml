@@ -5,71 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - ShopHub</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-dark bg-dark border-bottom border-body">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="Customer" asp-controller="Home" asp-action="Index">
-                    🛒 TuTiendaOnline
+        <nav class="navbar navbar-expand-sm navbar-light sticky-top">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" asp-area="Customer" asp-controller="Home" asp-action="Index">
+                    <i class="fa-solid fa-store me-2"></i> ShopHub
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarNav">
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav me-auto">
+                    <ul class="navbar-nav mx-auto">
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="Customer"
-                               asp-controller="Home" asp-action="Index">Inicio</a>
+                            <a class="nav-link px-3" asp-area="Customer" asp-controller="Home" asp-action="Index">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3" href="#">Catálogo</a>
                         </li>
                         @if (User.IsInRole("Admin"))
                         {
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
-                                    Admin
+                                <a class="nav-link dropdown-toggle px-3" href="#" data-bs-toggle="dropdown">
+                                    <i class="fa-solid fa-gear"></i> Admin
                                 </a>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a class="dropdown-item" asp-area="Admin"
-                                           asp-controller="Category" asp-action="Index">Categorías</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" asp-area="Admin"
-                                           asp-controller="Product" asp-action="Index">Productos</a>
-                                    </li>
+                                <ul class="dropdown-menu border-0 shadow-sm">
+                                    <li><a class="dropdown-item" asp-area="Admin" asp-controller="Category" asp-action="Index">Categorías</a></li>
+                                    <li><a class="dropdown-item" asp-area="Admin" asp-controller="Product" asp-action="Index">Productos</a></li>
                                 </ul>
                             </li>
                         }
                     </ul>
                     <ul class="navbar-nav">
+                        <li class="nav-item me-2">
+                            <a class="nav-link" asp-area="Customer" asp-controller="Cart" asp-action="Index">
+                                <i class="fa-solid fa-cart-shopping"></i> <span class="badge bg-primary rounded-pill">0</span>
+                            </a>
+                        </li>
                         @if (User.Identity != null && User.Identity.IsAuthenticated)
                         {
-                            <li class="nav-item">
-                                <a class="nav-link" asp-area="Customer"
-                                   asp-controller="Cart" asp-action="Index">
-                                    🛒 Carrito
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                                    <i class="fa-regular fa-user"></i> Mi Cuenta
                                 </a>
-                            </li>
-                            <li class="nav-item">
-                                <form asp-area="Identity" asp-page="/Account/Logout"
-                                      asp-route-returnUrl="/" method="post">
-                                    <button type="submit" class="nav-link btn btn-link">
-                                        Cerrar sesión
-                                    </button>
-                                </form>
+                                <ul class="dropdown-menu dropdown-menu-end border-0 shadow-sm">
+                                    <li>
+                                        <form asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="/" method="post">
+                                            <button type="submit" class="dropdown-item text-danger">Cerrar sesión</button>
+                                        </form>
+                                    </li>
+                                </ul>
                             </li>
                         }
                         else
                         {
                             <li class="nav-item">
-                                <a class="nav-link" asp-area="Identity"
-                                   asp-page="/Account/Login">Iniciar sesión</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" asp-area="Identity"
-                                   asp-page="/Account/Register">Registrarse</a>
+                                <a class="btn btn-outline-primary rounded-pill ms-2" asp-area="Identity" asp-page="/Account/Login">Entrar</a>
                             </li>
                         }
                     </ul>
@@ -81,15 +75,15 @@
     <div class="container mt-4">
         @if (TempData["success"] != null)
         {
-            <div class="alert alert-success alert-dismissible fade show">
-                @TempData["success"]
+            <div class="alert alert-success alert-dismissible fade show shadow-sm border-0 rounded-3" role="alert">
+                <i class="fa-solid fa-circle-check me-2"></i> @TempData["success"]
                 <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
             </div>
         }
         @if (TempData["error"] != null)
         {
-            <div class="alert alert-danger alert-dismissible fade show">
-                @TempData["error"]
+            <div class="alert alert-danger alert-dismissible fade show shadow-sm border-0 rounded-3" role="alert">
+                <i class="fa-solid fa-triangle-exclamation me-2"></i> @TempData["error"]
                 <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
             </div>
         }
@@ -97,9 +91,18 @@
         @RenderBody()
     </div>
 
-    <footer class="border-top footer text-muted mt-5">
-        <div class="container text-center py-3">
-            &copy; 2026 ShopHub — Todos los derechos reservados
+    <footer class="footer text-muted mt-auto">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; 2026 <strong>ShopHub</strong> — Desarrollado con <i class="fa-solid fa-heart text-danger"></i>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="text-muted me-3"><i class="fa-brands fa-instagram fs-5"></i></a>
+                    <a href="#" class="text-muted me-3"><i class="fa-brands fa-whatsapp fs-5"></i></a>
+                    <a href="#" class="text-muted"><i class="fa-brands fa-linkedin fs-5"></i></a>
+                </div>
+            </div>
         </div>
     </footer>
 
