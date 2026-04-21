@@ -1,60 +1,96 @@
 @model IEnumerable<ECommerceWeb.Models.Product>
 @{
-    ViewData["Title"] = "Productos";
+    ViewData["Title"] = "Gestión de Productos";
 }
 
-<div class="d-flex justify-content-between align-items-center mb-4">
-    <h2>Productos</h2>
-    <a asp-area="Admin" asp-controller="Product" asp-action="Upsert" class="btn btn-dark">+ Nuevo producto</a>
-</div>
+<div class="container-fluid py-4">
+    <div class="row mb-4 align-items-center">
+        <div class="col-md-6">
+            <h2 class="fw-bold mb-0">
+                <i class="fa-solid fa-box-open text-primary me-2"></i>Productos
+            </h2>
+            <p class="text-muted mb-0">Controla el catálogo de tu tienda online</p>
+        </div>
+        <div class="col-md-6 text-md-end mt-3 mt-md-0">
+            <a asp-action="Upsert" class="btn btn-primary shadow-sm rounded-pill">
+                <i class="fa-solid fa-plus me-1"></i> Nuevo Producto
+            </a>
+        </div>
+    </div>
 
-<table class="table table-bordered table-hover">
-    <thead class="table-dark">
-        <tr>
-            <th>Imagen</th>
-            <th>Nombre</th>
-            <th>Categoría</th>
-            <th>Precio</th>
-            <th>Acciones</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var p in Model)
-        {
-            <tr>
-                <td>
-                    @if (!string.IsNullOrEmpty(p.ImageUrl))
-                    {
-                        <img src="@p.ImageUrl" style="width:60px;height:60px;object-fit:cover;border-radius:6px;" />
-                    }
-                    else
-                    {
-                        <span>Sin imagen</span>
-                    }
-                </td>
-                <td>@p.Name</td>
-                <td>@p.Category?.Name</td>
-                <td>$@p.Price.ToString("F2")</td>
-                <td>
-                    <a asp-area="Admin" asp-controller="Product" asp-action="Upsert" asp-route-id="@p.Id"
-                       class="btn btn-sm btn-warning">Editar</a>
-                    <button onclick="deleteProduct(@p.Id)" class="btn btn-sm btn-danger">Eliminar</button>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+    <div class="card border-0 shadow-sm rounded-4">
+        <div class="card-body p-4">
+            <div class="table-responsive">
+                <table class="table table-hover align-middle mb-0" id="productTable">
+                    <thead class="table-light text-muted">
+                        <tr>
+                            <th class="border-0 rounded-start">Imagen</th>
+                            <th class="border-0">Nombre</th>
+                            <th class="border-0">Categoría</th>
+                            <th class="border-0">Precio</th>
+                            <th class="border-0 rounded-end text-center">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var p in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @if (!string.IsNullOrEmpty(p.ImageUrl))
+                                    {
+                                        <img src="@p.ImageUrl" class="shadow-sm rounded-3" 
+                                             style="width:60px; height:60px; object-fit:cover;" alt="Imagen de @p.Name" />
+                                    }
+                                    else
+                                    {
+                                        <div class="bg-light rounded-3 d-flex align-items-center justify-content-center shadow-sm" 
+                                             style="width:60px; height:60px;">
+                                            <i class="fa-regular fa-image text-muted fs-4"></i>
+                                        </div>
+                                    }
+                                </td>
+                                <td class="fw-semibold text-dark">@p.Name</td>
+                                <td>
+                                    <span class="badge bg-info bg-opacity-10 text-info border border-info rounded-pill px-3 py-2">
+                                        @(p.Category?.Name ?? "Sin categoría")
+                                    </span>
+                                </td>
+                                <td class="fw-bold text-success">
+                                    $@p.Price.ToString("F2")
+                                </td>
+                                <td class="text-center">
+                                    <div class="btn-group shadow-sm rounded-3" role="group">
+                                        <a asp-action="Upsert" asp-route-id="@p.Id" 
+                                           class="btn btn-sm btn-outline-primary" title="Editar">
+                                            <i class="fa-solid fa-pen-to-square"></i>
+                                        </a>
+                                        <button onclick="deleteProduct(@p.Id)" 
+                                                class="btn btn-sm btn-outline-danger" title="Eliminar">
+                                            <i class="fa-solid fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
 
 @section Scripts {
 <script>
 function deleteProduct(id) {
-    if (confirm('¿Eliminar este producto?')) {
+    if (confirm('¿Estás seguro de eliminar este producto? Esta acción no se puede deshacer.')) {
         fetch(`/Admin/Product/Delete/${id}`, { method: 'DELETE' })
             .then(r => r.json())
             .then(data => {
                 if (data.success) {
                     alert(data.message);
                     location.reload();
+                } else {
+                    alert('Error al intentar eliminar.');
                 }
             });
     }

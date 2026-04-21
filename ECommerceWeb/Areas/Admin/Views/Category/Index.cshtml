@@ -1,36 +1,61 @@
 @model IEnumerable<ECommerceWeb.Models.Category>
 @{
-    ViewData["Title"] = "Categorías";
+    ViewData["Title"] = "Gestión de Categorías";
 }
 
-<div class="d-flex justify-content-between align-items-center mb-4">
-    <h2>Categorías</h2>
-    <a asp-area="Admin" asp-controller="Category" asp-action="Create" class="btn btn-dark">+ Nueva categoría</a>
-</div>
+<div class="container-fluid py-4">
+    <div class="row mb-4 align-items-center">
+        <div class="col-md-6">
+            <h2 class="fw-bold mb-0">
+                <i class="fa-solid fa-tags text-primary me-2"></i>Categorías
+            </h2>
+            <p class="text-muted mb-0">Administra las clasificaciones de tus productos</p>
+        </div>
+        <div class="col-md-6 text-md-end mt-3 mt-md-0">
+            <a asp-action="Create" class="btn btn-primary shadow-sm rounded-pill">
+                <i class="fa-solid fa-plus me-1"></i> Nueva Categoría
+            </a>
+        </div>
+    </div>
 
-<table class="table table-bordered table-hover">
-    <thead class="table-dark">
-        <tr>
-            <th>ID</th>
-            <th>Nombre</th>
-            <th>Orden</th>
-            <th>Acciones</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var cat in Model)
-        {
-            <tr>
-                <td>@cat.Id</td>
-                <td>@cat.Name</td>
-                <td>@cat.DisplayOrder</td>
-                <td>
-                    <a asp-area="Admin" asp-controller="Category" asp-action="Edit" asp-route-id="@cat.Id"
-                       class="btn btn-sm btn-warning">Editar</a>
-                    <a asp-area="Admin" asp-controller="Category" asp-action="Delete" asp-route-id="@cat.Id"
-                       class="btn btn-sm btn-danger">Eliminar</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+    <div class="card border-0 shadow-sm rounded-4">
+        <div class="card-body p-4">
+            <div class="table-responsive">
+                <table class="table table-hover align-middle mb-0">
+                    <thead class="table-light text-muted">
+                        <tr>
+                            <th class="border-0 rounded-start">ID</th>
+                            <th class="border-0">Nombre</th>
+                            <th class="border-0">Orden</th>
+                            <th class="border-0 rounded-end text-center">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var cat in Model)
+                        {
+                            <tr>
+                                <td class="fw-bold text-muted">#@cat.Id</td>
+                                <td class="fw-semibold text-dark">@cat.Name</td>
+                                <td>
+                                    <span class="badge bg-secondary rounded-pill px-3">@cat.DisplayOrder</span>
+                                </td>
+                                <td class="text-center">
+                                    <div class="btn-group shadow-sm rounded-3" role="group">
+                                        <a asp-action="Edit" asp-route-id="@cat.Id" 
+                                           class="btn btn-sm btn-outline-primary" title="Editar">
+                                            <i class="fa-solid fa-pen-to-square"></i>
+                                        </a>
+                                        <a asp-action="Delete" asp-route-id="@cat.Id" 
+                                           class="btn btn-sm btn-outline-danger" title="Eliminar">
+                                            <i class="fa-solid fa-trash"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
