@@ -1,0 +1,17 @@
+C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb.DataAccess\bin\Debug\net10.0\ECommerceWeb.DataAccess.deps.json
+C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb.DataAccess\bin\Debug\net10.0\ECommerceWeb.DataAccess.runtimeconfig.json
+C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb.DataAccess\bin\Debug\net10.0\ECommerceWeb.DataAccess.dll
+C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb.DataAccess\bin\Debug\net10.0\ECommerceWeb.DataAccess.pdb
+C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb.DataAccess\bin\Debug\net10.0\ECommerceWeb.Models.dll
+C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb.DataAccess\bin\Debug\net10.0\ECommerceWeb.Models.pdb
+C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb.DataAccess\obj\Debug\net10.0\ECommerceWeb.DataAccess.csproj.AssemblyReference.cache
+C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb.DataAccess\obj\Debug\net10.0\ECommerceWeb.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb.DataAccess\obj\Debug\net10.0\ECommerceWeb.DataAccess.AssemblyInfoInputs.cache
+C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb.DataAccess\obj\Debug\net10.0\ECommerceWeb.DataAccess.AssemblyInfo.cs
+C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb.DataAccess\obj\Debug\net10.0\ECommerceWeb.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb.DataAccess\obj\Debug\net10.0\ECommerc.1833C9F7.Up2Date
+C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb.DataAccess\obj\Debug\net10.0\ECommerceWeb.DataAccess.dll
+C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb.DataAccess\obj\Debug\net10.0\refint\ECommerceWeb.DataAccess.dll
+C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb.DataAccess\obj\Debug\net10.0\ECommerceWeb.DataAccess.pdb
+C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb.DataAccess\obj\Debug\net10.0\ECommerceWeb.DataAccess.genruntimeconfig.cache
+C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb.DataAccess\obj\Debug\net10.0\ref\ECommerceWeb.DataAccess.dll

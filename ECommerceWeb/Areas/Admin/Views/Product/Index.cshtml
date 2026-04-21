@@ -1,0 +1,64 @@
+@model IEnumerable<ECommerceWeb.Models.Product>
+@{
+    ViewData["Title"] = "Productos";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2>Productos</h2>
+    <a asp-action="Upsert" class="btn btn-dark">+ Nuevo producto</a>
+</div>
+
+<table class="table table-bordered table-hover" id="productTable">
+    <thead class="table-dark">
+        <tr>
+            <th>Imagen</th>
+            <th>Nombre</th>
+            <th>Categoría</th>
+            <th>Precio</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <td>
+                    @if (!string.IsNullOrEmpty(p.ImageUrl))
+                    {
+                        <img src="@p.ImageUrl" style="width:60px;height:60px;object-fit:cover;border-radius:6px;" />
+                    }
+                    else
+                    {
+                        <span>Sin imagen</span>
+                    }
+                </td>
+                <td>@p.Name</td>
+                <td>@p.Category?.Name</td>
+                <td>$@p.Price.ToString("F2")</td>
+                <td>
+                    <a asp-action="Upsert" asp-route-id="@p.Id"
+                       class="btn btn-sm btn-warning">Editar</a>
+                    <button onclick="deleteProduct(@p.Id)"
+                            class="btn btn-sm btn-danger">Eliminar</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section Scripts {
+<script>
+function deleteProduct(id) {
+    if (confirm('¿Eliminar este producto?')) {
+        fetch(`/Admin/Product/Delete/${id}`, { method: 'DELETE' })
+            .then(r => r.json())
+            .then(data => {
+                if (data.success) {
+                    alert(data.message);
+                    location.reload();
+                }
+            });
+    }
+}
+</script>
+}

@@ -1,0 +1,15 @@
+C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb.Utility\bin\Debug\net10.0\ECommerceWeb.Utility.deps.json
+C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb.Utility\bin\Debug\net10.0\ECommerceWeb.Utility.dll
+C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb.Utility\bin\Debug\net10.0\ECommerceWeb.Utility.pdb
+C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb.Utility\bin\Debug\net10.0\ECommerceWeb.Models.dll
+C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb.Utility\bin\Debug\net10.0\ECommerceWeb.Models.pdb
+C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb.Utility\obj\Debug\net10.0\ECommerceWeb.Utility.csproj.AssemblyReference.cache
+C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb.Utility\obj\Debug\net10.0\ECommerceWeb.Utility.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb.Utility\obj\Debug\net10.0\ECommerceWeb.Utility.AssemblyInfoInputs.cache
+C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb.Utility\obj\Debug\net10.0\ECommerceWeb.Utility.AssemblyInfo.cs
+C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb.Utility\obj\Debug\net10.0\ECommerceWeb.Utility.csproj.CoreCompileInputs.cache
+C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb.Utility\obj\Debug\net10.0\ECommerc.9684BBAD.Up2Date
+C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb.Utility\obj\Debug\net10.0\ECommerceWeb.Utility.dll
+C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb.Utility\obj\Debug\net10.0\refint\ECommerceWeb.Utility.dll
+C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb.Utility\obj\Debug\net10.0\ECommerceWeb.Utility.pdb
+C:\Users\Javi Bossio\ECommerceWeb\ECommerceWeb.Utility\obj\Debug\net10.0\ref\ECommerceWeb.Utility.dll

@@ -1,0 +1,36 @@
+@model IEnumerable<ECommerceWeb.Models.Category>
+@{
+    ViewData["Title"] = "Categorías";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2>Categorías</h2>
+    <a asp-action="Create" class="btn btn-dark">+ Nueva categoría</a>
+</div>
+
+<table class="table table-bordered table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Orden</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var cat in Model)
+        {
+            <tr>
+                <td>@cat.Id</td>
+                <td>@cat.Name</td>
+                <td>@cat.DisplayOrder</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@cat.Id"
+                       class="btn btn-sm btn-warning">Editar</a>
+                    <a asp-action="Delete" asp-route-id="@cat.Id"
+                       class="btn btn-sm btn-danger">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
