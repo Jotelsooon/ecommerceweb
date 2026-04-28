@@ -32,39 +32,6 @@ body {
   line-height: 60px;
 }
 
-/* --- Identidad y Logotipo --- */
-.central-logo-container {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-}
-
-.central-logo-icon {
-    font-size: 2.2rem;
-    color: var(--central-yellow); 
-    margin-right: 10px;
-    line-height: 1;
-}
-
-.central-logo-text {
-    display: flex;
-    flex-direction: column;
-    line-height: 1;
-}
-
-.central-logo-top {
-    font-weight: 800;
-    font-size: 1rem;
-    letter-spacing: 1.5px;
-    color: var(--central-blue); 
-}
-
-.central-logo-bottom {
-    font-weight: 900;
-    font-size: 1.6rem;
-    color: var(--central-blue); 
-}
-
 /* --- Sobrescribir Bootstrap --- */
 .btn-primary {
     background-color: var(--central-blue);
@@ -87,6 +54,20 @@ body {
     background-color: var(--central-blue);
     border-color: var(--central-blue);
     color: white;
+}
+
+/* --- Nuevo Botón Amarillo Central --- */
+.btn-central-yellow {
+    background-color: var(--central-yellow);
+    color: var(--central-blue);
+    border: 2px solid var(--central-yellow);
+    transition: all 0.3s ease;
+}
+
+.btn-central-yellow:hover {
+    background-color: transparent;
+    color: var(--central-yellow);
+    border: 2px solid var(--central-yellow);
 }
 
 .text-primary {
