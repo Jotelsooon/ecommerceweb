@@ -1,121 +1,103 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-
 :root {
-    /* Paleta de colores moderna */
-    --primary-color: #6c5ce7; /* Un morado vibrante, muy usado en tiendas modernas */
-    --secondary-color: #a29bfe;
-    --dark-color: #2d3436;
-    --light-bg: #f8f9fa;
-    --text-muted: #636e72;
+    --central-blue: #004085; 
+    --central-yellow: #FFC107; 
+    --central-gold-text: #B8860B; 
+}
+
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--light-bg);
-    color: var(--dark-color);
+    margin-bottom: 60px;
+    background-color: #f8f9fa; 
+    font-family: 'Montserrat', sans-serif; 
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem var(--central-blue);
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
+
+/* --- Identidad y Logotipo --- */
+.central-logo-container {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.central-logo-icon {
+    font-size: 2.2rem;
+    color: var(--central-yellow); 
+    margin-right: 10px;
+    line-height: 1;
+}
+
+.central-logo-text {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    margin-bottom: 0;
+    line-height: 1;
 }
 
-main {
-    flex: 1;
+.central-logo-top {
+    font-weight: 800;
+    font-size: 1rem;
+    letter-spacing: 1.5px;
+    color: var(--central-blue); 
 }
 
-/* --- Navegación --- */
-.navbar {
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    background-color: rgba(255, 255, 255, 0.95) !important;
-    backdrop-filter: blur(10px); /* Efecto cristal moderno */
-    padding: 1rem 0;
+.central-logo-bottom {
+    font-weight: 900;
+    font-size: 1.6rem;
+    color: var(--central-blue); 
 }
 
-.navbar-brand {
-    font-weight: 700;
-    color: var(--primary-color) !important;
-    font-size: 1.5rem;
-    letter-spacing: -0.5px;
-}
-
-.nav-link {
-    font-weight: 600;
-    color: var(--dark-color) !important;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.nav-link:hover {
-    color: var(--primary-color) !important;
-    transform: translateY(-2px);
-}
-
-/* --- Botones --- */
+/* --- Sobrescribir Bootstrap --- */
 .btn-primary {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
-    border-radius: 30px;
-    padding: 10px 25px;
-    font-weight: 600;
-    transition: all 0.3s ease;
+    background-color: var(--central-blue);
+    border-color: var(--central-blue);
+    color: white;
 }
 
 .btn-primary:hover {
-    background-color: #5b4bc4;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 15px rgba(108, 92, 231, 0.3);
+    background-color: #003366; 
+    border-color: #003366;
+    color: var(--central-yellow);
 }
 
-/* --- Hero Section (Inicio) --- */
-.hero-section {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+.btn-outline-primary {
+    color: var(--central-blue);
+    border-color: var(--central-blue);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--central-blue);
+    border-color: var(--central-blue);
     color: white;
-    padding: 80px 20px;
-    border-radius: 20px;
-    margin-top: 20px;
-    box-shadow: 0 15px 30px rgba(108, 92, 231, 0.2);
-    text-align: center;
 }
 
-.hero-section h1 {
-    font-weight: 700;
-    font-size: 3.5rem;
-    margin-bottom: 20px;
+.text-primary {
+    color: var(--central-blue) !important;
 }
 
-.hero-section p {
-    font-size: 1.2rem;
-    font-weight: 300;
-    opacity: 0.9;
+.bg-primary {
+    background-color: var(--central-blue) !important;
 }
 
-/* --- Tarjetas de Categorías --- */
-.category-card {
-    background: white;
-    border-radius: 15px;
-    padding: 30px 20px;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
-    cursor: pointer;
-    height: 100%;
-}
-
-.category-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-}
-
-.category-icon {
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    margin-bottom: 15px;
-}
-
-/* --- Footer --- */
-.footer {
-    background-color: white;
-    border-top: none !important;
-    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.03);
-    padding: 20px 0;
-    margin-top: 50px;
+.badge.bg-primary {
+    background-color: var(--central-yellow) !important; 
+    color: var(--central-blue) !important; 
 }
